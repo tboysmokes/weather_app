@@ -1,0 +1,34 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wea{
+    margin-top: 200px;
+    text-align: center;
+}
+
+.wea h1{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.wea h3{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+.wea input[type='text']
+{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.wea button{
+    margin-top: 20px;
+}
