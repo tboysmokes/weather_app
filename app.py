@@ -9,9 +9,10 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'weatherapp'
 
 
+# I set city to a defalt values incase the user doesn't input anything
 def get_weather_data(city = "lagos"):
 
-    request_url = f'https://api.openweathermap.org/data/2.5/weather?appid = {os.getenv("API_KEY")}&q={city}&units=imperial'
+    request_url = f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&units=imperial'
 
     weather_data = requests.get(request_url).json()
 
@@ -32,8 +33,8 @@ def get_data():
             "weather.html",
             title = weather_data["name"],
             status = weather_data["weather"][0]["description"],
-            temp = f"{weather_data['main']['temp']:.f }",
-            feels_like = f"{weather_data['main']['feel_like']:.f }"
+            temp = f"{weather_data['main']['temp']}",
+            feels_like = f"{weather_data['main']['feels_like']}"
         )
     return render_template("interface.html")
 
