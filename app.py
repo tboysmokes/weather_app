@@ -26,10 +26,8 @@ def get_data():
     if request.method == "POST":
         city = request.form['input']
 
-
-        if city == "":
+        if not bool(city.strip()):
             city = "lagos"
-
 
         weather_data = get_weather_data(city)
 
