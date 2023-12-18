@@ -16,7 +16,7 @@ Installation
 Clone this repository to your local machine:
 
 bash
-git clone https://github.com/yourusername/weather-flask-app.git
+git clone https://github.com/tboysmokes/weather-flask-app.git
 Navigate to the project directory:
 
 bash
